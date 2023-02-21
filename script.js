@@ -197,7 +197,13 @@ function changeOperation(e) {
   // .
   else if (e === "." || e.key === ".") {
     if (checkForDot(operation)) {
-      operation += ".";
+      if (counterForEqualTo === 0) {
+        operation += ".";
+      } else {
+        counterForEqualTo = 0;
+        operation = "";
+        operation += ".";
+      }
     }
   }
   // =

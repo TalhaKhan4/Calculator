@@ -3,8 +3,9 @@
 
 // display function
 function display(operation) {
-//   operation = operation.replaceAll("*", "×");
-//   operation = operation.replaceAll("/", "÷");
+  operation = String(operation);
+   operation = operation.replaceAll("*", "×");
+   operation = operation.replaceAll("/", "÷");
   screenOutput.textContent = operation;
 }
 
